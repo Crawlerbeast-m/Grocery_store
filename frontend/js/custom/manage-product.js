@@ -22,7 +22,7 @@ var productModal = $("#productModal");
         // If we found id value in form then update product detail
         var data = $("#productForm").serializeArray();
         var requestPayload = {
-            product_name: null,
+            Name: null,
             uom_id: null,
             price_per_unit: null
         };
@@ -30,7 +30,7 @@ var productModal = $("#productModal");
             var element = data[i];
             switch(element.name) {
                 case 'name':
-                    requestPayload.product_name = element.value;
+                    requestPayload.Name = element.value;
                     break;
                 case 'uoms':
                     requestPayload.uom_id = element.value;
